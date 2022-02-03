@@ -11,7 +11,10 @@ const CounterContextProvider = (props) => {
     const decrementCount = () => {
         setCount(count-1);
     };
-    const objData = { count, incrementCount, decrementCount };
+    const resetCount = () =>{
+        setCount(0);
+    }
+    const objData = { count, incrementCount, decrementCount, resetCount };
 
   return(<CounterContext.Provider value={ objData }>
             { props.children }
